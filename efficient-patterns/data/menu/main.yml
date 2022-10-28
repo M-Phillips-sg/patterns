@@ -1,0 +1,13 @@
+---
+main:
+  - name: What is a Design Pattern  
+    ref: "intro"
+  - name: Usage
+    sub:
+      - name: Getting started
+        ref: "overview"
+      
+  - name: Creational
+    sub:
+      - name: Singleton
+        ref: "singleton"
