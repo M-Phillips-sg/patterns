@@ -17,12 +17,11 @@ const SingletonFunction = (function () {
   };
 })();
 
-
-  function runSingletonFunction() {
-    console.log('Running Singleton Function example');
-    const singleton1 = SingletonFunction.getInstance();
-    const singleton2 = SingletonFunction.getInstance();
-    console.log('Singleton 1 is the same object as Singleton 2? ', singleton1 === singleton2);
-  }
+function runSingletonFunction() {
+  console.log('Running Singleton Function example');
+  const singleton1 = SingletonFunction.getInstance();
+  const singleton2 = SingletonFunction.getInstance();
+  console.log('Singleton 1 is the same object as Singleton 2? ', singleton1 === singleton2);
+}
 
 export { runSingletonFunction };

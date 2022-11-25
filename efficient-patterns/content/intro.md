@@ -1,5 +1,8 @@
 ---
+layout: default
 title: What is a Pattern
+permalink: /patterns/intro/
+
 ---
 
 **Patterns** are design level solutions for solving common problems that software engineers come across on a frequent basis. The design patterns themsevles are not code but rather describe how to tackle a given problem using a tried and tested design.

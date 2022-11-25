@@ -11,3 +11,5 @@ main:
     sub:
       - name: Singleton
         ref: "singleton"
+      - name: Builder
+        ref: "builder"

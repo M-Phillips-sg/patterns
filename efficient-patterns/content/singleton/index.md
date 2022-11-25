@@ -56,8 +56,6 @@ class Singleton {
   }
 }
 
-// Some business logic
-
 function businessLogic() {
   const singleton1 = Singleton.getInstance();
   const singleton2 = Singleton.getInstance();
@@ -71,6 +69,36 @@ function businessLogic() {
 ```
 
 Note the constructor is denoted as being private which prevents "new" being called to construct a new instance of this object and instead the getInstance method must be called.
+
+Function Singleton Example
+
+```
+
+const SingletonFunction = (function () {
+  let instance: Object;
+  
+  function createInstance() {
+    const object = new Object("I am the instance");
+    return object;
+  }
+  
+  return {
+    getInstance: function () {
+      if (!instance) {
+        instance = createInstance();
+      }
+      return instance;
+    }
+  };
+})();
+
+function runSingletonFunction() {
+  console.log('Running Singleton Function example');
+  const singleton1 = SingletonFunction.getInstance();
+  const singleton2 = SingletonFunction.getInstance();
+  console.log('Singleton 1 is the same object as Singleton 2? ', singleton1 === singleton2);
+}
+```
 
 ### The Good Points
 - Ensures only one instance of a class can exist
