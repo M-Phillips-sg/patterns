@@ -27,18 +27,6 @@ function options(option: string)  {
   return optionList[option]()
   }
 
-  function test(a: string, b: number, c: () => void) {
-    return {
-      a: a,
-      b: b,
-      fn () {c()},
-    }
-  };
-
-  function con() {
-    console.log('test')
-  }
-
 (async () => {
   const response = await prompts(
     [
@@ -57,17 +45,5 @@ function options(option: string)  {
 
 
   options(response.patterns);
-  const obj = test('test', 12, con);
-  const obj2 = test('test2', 14, con);
-  const finalObj =[
-    obj,
-    obj2,
-    test('test', 12, con)
 
-  ];
-    
-    
-  console.log(finalObj);
-  finalObj[0].fn();
-  con();
 })();

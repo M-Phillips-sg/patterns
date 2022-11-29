@@ -69,27 +69,28 @@ function printCar(car: Car) {
    an engine size of ${car.engineSize} \r
    an engine type of ${car.engineType} \r
    it has ${car.numberOfDoors} doors \r
-   and it ${car.hasSunRoof ? ' has a sunroof' : ' does not have a sunroof'} \n`;
+   it ${car.hasSunRoof ? ' has a sunroof' : ' does not have a sunroof'} \r
+   and it is made by ${car.make}\n`;
    console.log(carInfo);
 }
 
 function buildSomeCars() {
-  const aNewCar: Car = new CarBuilder()
+  const aNewCitroen: Car = new CarBuilder()
   .manufacturedBy('Citroen')
   .withEngineSizeOf('1.4l')
   .withExteriorColourOf('pearlescent red')
   .buildCar();
   
-  printCar(aNewCar);
+  printCar(aNewCitroen);
   
-  const anotherNewCar: Car = new CarBuilder()
+  const aNewPeugeot: Car = new CarBuilder()
   .manufacturedBy('Peugeot')
   .withASunRoof(true)
   .withEngineTypeOf('petrol')
   .withExteriorColourOf('metallic blue')
   .buildCar();
   
-  printCar(anotherNewCar);
+  printCar(aNewPeugeot);
 };
 
 export { buildSomeCars };
