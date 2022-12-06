@@ -1,6 +1,6 @@
 import prompts from 'prompts';
-import { buildSomeCars } from './builders/classExample';
-import { runPracticalExample, runSingletonClass, runSingletonFunction } from './singletons';
+import { buildSomeCars } from './creationalPatterns/builders/classExample';
+import { runPracticalExample, runSingletonClass, runSingletonFunction } from './creationalPatterns/singletons';
 
 
 
@@ -41,8 +41,6 @@ function options(option: string)  {
       ],
     }
   ]);
-
-
 
   options(response.patterns);
 

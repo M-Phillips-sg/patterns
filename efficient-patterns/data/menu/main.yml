@@ -8,8 +8,19 @@ main:
         ref: "overview"
       
   - name: Creational
+    ref: "/creationalPatterns"
     sub:
       - name: Singleton
-        ref: "singleton"
+        ref: "/singleton"
       - name: Builder
-        ref: "builder"
+        ref: "/builder"
+  - name: Structural
+    ref: "/structuralPatterns"
+    sub:
+      - name: Adapter
+      - name: Bridge
+      - name: Composite
+  - name: Behavioural
+    ref: "/behaviouralPatterns"
+    sub:
+      -name: Observer
