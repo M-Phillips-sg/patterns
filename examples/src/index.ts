@@ -2,29 +2,26 @@ import prompts from 'prompts';
 import { buildSomeCars } from './creationalPatterns/builders/classExample';
 import { runPracticalExample, runSingletonClass, runSingletonFunction } from './creationalPatterns/singletons';
 
-
-
 type PatternTypes = {
   [key: string]: () => void;
 }
 
 function options(option: string)  {
   function singleton() {
-     runSingletonClass();
+    runSingletonClass();
     runSingletonFunction();
     runPracticalExample();
   }
 
   const optionList: PatternTypes  = {
-    '1' : function() {
-      return singleton();
-      }, 
-    '2' : function() {
-      return buildSomeCars();
+      '1' : function() {
+        return singleton();
+        }, 
+      '2' : function() {
+        return buildSomeCars();
+      }
     }
-  }
-
-  return optionList[option]()
+    return optionList[option];
   }
 
 (async () => {
